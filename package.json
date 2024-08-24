@@ -13,7 +13,8 @@
     "check:lint": "eslint .",
     "check:types": "tsc --pretty --noEmit",
     "test-all": "pnpm check:format && pnpm check:lint && pnpm check:types",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "rm -rf build && rm -rf node_modules && rm -rf .next && rm -rf tsconfig.tsbuildinfo"
   },
   "dependencies": {
     "next": "14.2.6",
