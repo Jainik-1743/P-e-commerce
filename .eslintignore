@@ -5,3 +5,5 @@ build
 out
 storybook-static
 pnpm-lock.yaml
+src/components/ui
+src/lib/utils.ts
