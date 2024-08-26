@@ -1,39 +1,21 @@
-import Link from "next/link"
-
-import CartIcon from "@/components/icons/cart"
-import LikeIcon from "@/components/icons/like"
-import SearchIcon from "@/components/icons/search"
+import NavLinks from "@/components/layout/header/nav-links"
+import Logo from "@/components/reusable-components/logo"
 import MaxWidthWrapper from "@/components/reusable-components/max-width-wrapper"
-import { Input } from "@/components/ui/input"
+
+import HeaderIcons from "./header-icons"
 
 export default function Header() {
   return (
-    <MaxWidthWrapper>
-      <div className='flex items-center justify-between py-4'>
-        <Link href='/' className='text-2xl font-bold'>
-          Peru
-        </Link>
+    <header className='border-b border-gray-200'>
+      <MaxWidthWrapper>
+        <div className='flex items-center justify-between pb-4 pt-8'>
+          <Logo />
 
-        <ul className='flex items-center space-x-6'>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Sign Up</li>
-        </ul>
+          <NavLinks />
 
-        <div className='flex items-center space-x-4'>
-          <div className='relative w-64'>
-            <Input
-              type='text'
-              placeholder='What are you looking for?'
-              className='bg-[#F5F5F5] text-sm'
-            />
-            <SearchIcon className='absolute right-3 top-1/2 -translate-y-1/2 transform text-gray-400' />
-          </div>
-          <LikeIcon />
-          <CartIcon />
+          <HeaderIcons />
         </div>
-      </div>
-    </MaxWidthWrapper>
+      </MaxWidthWrapper>
+    </header>
   )
 }
