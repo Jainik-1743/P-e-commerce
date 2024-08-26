@@ -21,6 +21,7 @@ const config = {
     },
     extend: {
       colors: {
+        subTitle: "hsl(var(--subTitle))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
