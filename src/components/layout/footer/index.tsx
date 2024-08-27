@@ -1,6 +1,6 @@
-import Link from "next/link"
-
 import SendIcon from "@/components/icons/send"
+import FooterLink from "@/components/layout/footer/footer-link"
+import FooterSection from "@/components/layout/footer/footer-section"
 import MaxWidthWrapper from "@/components/reusable-components/max-width-wrapper"
 import { Input } from "@/components/ui/input"
 
@@ -26,78 +26,34 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className='w-full max-w-[175px]'>
-            <p className='text-start text-xl font-bold tracking-wider'>
-              Support
-            </p>
+          <FooterSection title='Support'>
+            <FooterLink href='mailto:jainikpatel1743@gmail.com'>
+              jainikpatel1743@gmail.com
+            </FooterLink>
+            <FooterLink href='tel:+91 9909126589'>+91 9909126589</FooterLink>
+          </FooterSection>
 
-            <div className='mt-6 flex flex-col items-start space-y-4 text-start text-sm'>
-              <Link href='mailto:jainikpatel1743@gmail.com'>
-                jainikpatel1743@gmail.com
-              </Link>
-              <Link href='tel:+91 9909126589'>+91 9909126589</Link>
-            </div>
-          </div>
+          <FooterSection title='Account'>
+            <FooterLink href='/my-account'>My Account</FooterLink>
+            <FooterLink href='/login'>Login / Register</FooterLink>
+            <FooterLink href='/cart'>Cart</FooterLink>
+            <FooterLink href='/wishlist'>Wishlist</FooterLink>
+            <FooterLink href='/shop'>Shop</FooterLink>
+          </FooterSection>
 
-          <div className='w-full max-w-[175px]'>
-            <p className='text-start text-xl font-bold tracking-wider'>
-              Account
-            </p>
+          <FooterSection title='Quick Link'>
+            <FooterLink href='/privacy-policy'>Privacy Policy</FooterLink>
+            <FooterLink href='/terms-conditions'>Terms & Conditions</FooterLink>
+            <FooterLink href='/faqs'>FAQs</FooterLink>
+            <FooterLink href='/contact'>Contact</FooterLink>
+          </FooterSection>
 
-            <div className='mt-6 flex flex-col items-start space-y-4 text-start text-sm'>
-              <Link href='/my-account'>My Account</Link>
-              <Link href='/login'>Login / Register</Link>
-              <Link href='/cart'>Cart</Link>
-              <Link href='/wishlist'>Wishlist</Link>
-              <Link href='/shop'>Shop</Link>
-            </div>
-          </div>
-
-          <div className='w-full max-w-[175px]'>
-            <p className='text-start text-xl font-bold tracking-wider'>
-              Quick Link
-            </p>
-
-            <div className='mt-6 flex flex-col items-start space-y-4 text-start text-sm'>
-              <Link href='/privacy-policy'>Privacy Policy</Link>
-              <Link href='/terms-conditions'>Terms & Conditions</Link>
-              <Link href='/faqs'>FAQs</Link>
-              <Link href='/contact'>Contact</Link>
-            </div>
-          </div>
-
-          <div className='w-full max-w-[175px]'>
-            <p className='text-start text-xl font-bold tracking-wider'>
-              Follow Us
-            </p>
-
-            <div className='mt-6 flex flex-col items-start space-y-4 text-start text-sm'>
-              <Link
-                href='/'
-                className='transition-all duration-300 hover:text-gray-400 hover:underline hover:underline-offset-4'
-              >
-                Facebook
-              </Link>
-              <Link
-                href='/'
-                className='transition-all duration-300 hover:text-gray-400 hover:underline hover:underline-offset-4'
-              >
-                Instagram
-              </Link>
-              <Link
-                href='/'
-                className='transition-all duration-300 hover:text-gray-400 hover:underline hover:underline-offset-4'
-              >
-                Twitter
-              </Link>
-              <Link
-                href='/'
-                className='transition-all duration-300 hover:text-gray-400 hover:underline hover:underline-offset-4'
-              >
-                LinkedIn
-              </Link>
-            </div>
-          </div>
+          <FooterSection title='Follow Us'>
+            <FooterLink href='/'>Facebook</FooterLink>
+            <FooterLink href='/'>Instagram</FooterLink>
+            <FooterLink href='/'>Twitter</FooterLink>
+            <FooterLink href='/'>LinkedIn</FooterLink>
+          </FooterSection>
         </div>
 
         <div className='py-6'>

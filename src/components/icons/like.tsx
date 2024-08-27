@@ -3,18 +3,17 @@ import { SVGProps } from "react"
 const LikeIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    width={32}
-    height={32}
+    width={24}
+    height={24}
     fill='none'
+    stroke='currentColor'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    className='lucide lucide-heart'
     {...props}
   >
-    <path
-      stroke='#000'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      strokeWidth={1.5}
-      d='M11 7c-2.761 0-5 2.216-5 4.95 0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C25.125 19.395 26 14.157 26 11.95 26 9.216 23.761 7 21 7s-5 3-5 3-2.239-3-5-3Z'
-    />
+    <path d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z' />
   </svg>
 )
 export default LikeIcon
