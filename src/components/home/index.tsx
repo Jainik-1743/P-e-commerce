@@ -17,6 +17,7 @@ export default function App() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       initial: 0,
+      loop: true,
       slideChanged(slider) {
         setCurrentSlide(slider.track.details.rel)
       },
