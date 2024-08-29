@@ -9,14 +9,14 @@ const CartIcon = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <path
-      stroke='#000'
+      stroke='currentColor'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={1.5}
       d='M11 27a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM25 27a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM3 5h4l3 17h16'
     />
     <path
-      stroke='#000'
+      stroke='currentColor'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={1.5}

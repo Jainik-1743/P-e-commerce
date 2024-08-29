@@ -14,6 +14,7 @@ interface ProductCardProps {
   productDescription: string
   productPrice: number
   percentageOfSale?: number
+  handleAddToCart?: () => void
 }
 
 export default function ProductCard({
@@ -23,6 +24,7 @@ export default function ProductCard({
   productDescription,
   productPrice,
   percentageOfSale,
+  handleAddToCart,
 }: ProductCardProps) {
   return (
     <div className={cn("group rounded shadow-sm", className)}>
@@ -53,6 +55,7 @@ export default function ProductCard({
         )}
 
         <Button
+          onClick={handleAddToCart}
           variant='default'
           className='absolute bottom-[-20px] left-0 right-0 h-fit transform rounded-none py-1.5 opacity-0 transition-all duration-300 group-hover:bottom-0 group-hover:opacity-100'
         >

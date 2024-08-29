@@ -1,6 +1,20 @@
+import { StaticImageData } from "next/image"
+
 import ProductSrc from "@/components/assets/gaming-mouse.png"
 
-export const saleProductsList = [
+export type IncludeQuantity = Product & {
+  quantity: number
+}
+export interface Product {
+  id: number
+  imageSrc: StaticImageData
+  productName: string
+  productDescription: string
+  productPrice: number
+  percentageOfSale?: number
+}
+
+export const saleProductsList: Product[] = [
   {
     id: 1,
     imageSrc: ProductSrc,

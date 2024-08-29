@@ -4,7 +4,11 @@ import { useState } from "react"
 
 import { useKeenSlider } from "keen-slider/react"
 
-import { saleProductsList } from "@/components/constants/sale-products-list"
+import {
+  IncludeQuantity,
+  Product,
+  saleProductsList,
+} from "@/components/constants/sale-products-list"
 import Slider from "@/components/home"
 import Countdown from "@/components/home/count-down"
 import LeftIcon from "@/components/icons/left"
@@ -33,6 +37,40 @@ export default function Home() {
       setLoaded(true)
     },
   })
+
+  const handleAddToCart = (product: Product) => {
+    const existingCart = JSON.parse(
+      localStorage.getItem("cart") || "[]",
+    ) as IncludeQuantity[]
+
+    const productIndex = existingCart.findIndex(
+      (cartItem) => cartItem.id === product.id,
+    )
+
+    if (productIndex !== -1) {
+      const updatedCart = existingCart.map((cartItem, index) => {
+        if (index === productIndex) {
+          return {
+            ...cartItem,
+            quantity: Math.min(cartItem.quantity + 1, 9),
+          }
+        }
+        return cartItem
+      })
+
+      localStorage.setItem("cart", JSON.stringify(updatedCart))
+
+      const event = new Event("cartUpdated")
+      window.dispatchEvent(event)
+    } else {
+      const updatedCart = [...existingCart, { ...product, quantity: 1 }]
+
+      localStorage.setItem("cart", JSON.stringify(updatedCart))
+
+      const event = new Event("cartUpdated")
+      window.dispatchEvent(event)
+    }
+  }
 
   return (
     <main className='mt-10 min-h-dvh'>
@@ -94,6 +132,7 @@ export default function Home() {
                 productDescription={product.productDescription}
                 productPrice={product.productPrice}
                 percentageOfSale={product.percentageOfSale}
+                handleAddToCart={() => handleAddToCart(product)}
               />
             </div>
           ))}

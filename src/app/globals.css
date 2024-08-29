@@ -68,3 +68,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .vibrate {
+    animation: vibrate 0.3s linear;
+  }
+}
+
+.cart {
+  box-shadow: 0px 1px 13px 0px #0000000d;
+}
