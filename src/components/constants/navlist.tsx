@@ -13,6 +13,6 @@ export const navList = [
   },
   {
     name: "Sign Up",
-    href: "/signup",
+    href: "/sign-up",
   },
 ]
