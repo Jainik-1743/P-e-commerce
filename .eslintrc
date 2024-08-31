@@ -96,6 +96,13 @@
   "settings": {
     "import/resolver": {
       "typescript": { "alwaysTryTypes": true, "project": "./tsconfig.json" }
-    }
+    },
+     "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@/assets", "./public/assets"]
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
   }
 }

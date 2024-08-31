@@ -1,8 +1,8 @@
 import { BadgeDollarSign } from "lucide-react"
 import Image from "next/image"
+// import AboutImage from "next.svg"
 
 import ServiceCard from "@/components/about/service-card"
-import AboutImage from "@/components/assets/about.png"
 import MaxWidthWrapper from "@/components/reusable-components/max-width-wrapper"
 import {
   Breadcrumb,
@@ -47,9 +47,11 @@ export default function About() {
             </p>
           </div>
           <Image
-            src={AboutImage}
+            src='/images/about.png'
             alt='Side Image'
             objectFit='cover'
+            width={700}
+            height={600}
             className='h-[600px] min-w-[700px]'
           />
         </div>

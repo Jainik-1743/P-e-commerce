@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 
 import { cn } from "@/lib/utils"
 
@@ -9,7 +9,7 @@ import { Button } from "../ui/button"
 
 interface ProductCardProps {
   className?: string
-  imageSrc: StaticImageData
+  imageSrc: string
   productName: string
   productDescription: string
   productPrice: number

@@ -1,13 +1,9 @@
-import { StaticImageData } from "next/image"
-
-import ProductSrc from "@/components/assets/gaming-mouse.png"
-
 export type IncludeQuantity = Product & {
   quantity: number
 }
 export interface Product {
   id: number
-  imageSrc: StaticImageData
+  imageSrc: string
   productName: string
   productDescription: string
   productPrice: number
@@ -17,7 +13,7 @@ export interface Product {
 export const saleProductsList: Product[] = [
   {
     id: 1,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Gaming Mouse",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -26,7 +22,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 2,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Gaming Keyboard",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -34,7 +30,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 3,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Gaming Headset",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -43,7 +39,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 4,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Gaming Monitor",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -52,7 +48,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 5,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Chair",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -60,7 +56,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 6,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Table",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -68,7 +64,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 7,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Sofa",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -76,7 +72,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 8,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Bed",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -84,7 +80,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 9,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Lamp",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -92,7 +88,7 @@ export const saleProductsList: Product[] = [
   },
   {
     id: 10,
-    imageSrc: ProductSrc,
+    imageSrc: "/images/gaming-mouse.png",
     productName: "Curtains",
     productDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
