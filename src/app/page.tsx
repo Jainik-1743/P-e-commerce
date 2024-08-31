@@ -3,6 +3,7 @@
 import { useState } from "react"
 
 import { useKeenSlider } from "keen-slider/react"
+import Link from "next/link"
 
 import {
   IncludeQuantity,
@@ -122,7 +123,8 @@ export default function Home() {
           )}
         >
           {saleProductsList.map((product) => (
-            <div
+            <Link
+              href={`/products/${product.id}`}
               key={product.id}
               className='keen-slider__slide group rounded-lg bg-white shadow-lg'
             >
@@ -134,7 +136,7 @@ export default function Home() {
                 percentageOfSale={product.percentageOfSale}
                 handleAddToCart={() => handleAddToCart(product)}
               />
-            </div>
+            </Link>
           ))}
         </div>
 
