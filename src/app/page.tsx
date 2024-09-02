@@ -126,7 +126,7 @@ export default function Home() {
             <Link
               href={`/products/${product.id}`}
               key={product.id}
-              className='keen-slider__slide group rounded-lg bg-white shadow-lg'
+              className='keen-slider__slide m-1'
             >
               <ProductCard
                 imageSrc={product.imageSrc}

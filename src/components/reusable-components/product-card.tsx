@@ -14,7 +14,7 @@ interface ProductCardProps {
   productDescription: string
   productPrice: number
   percentageOfSale?: number
-  handleAddToCart?: () => void
+  handleAddToCart?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export default function ProductCard({
@@ -33,6 +33,8 @@ export default function ProductCard({
           src={imageSrc}
           alt={productName}
           layout='cover'
+          width={200}
+          height={200}
           className='rounded-t-lg object-cover'
         />
         <Button
@@ -55,9 +57,13 @@ export default function ProductCard({
         )}
 
         <Button
-          onClick={handleAddToCart}
+          onClick={(event) => {
+            event.preventDefault()
+            event.stopPropagation()
+            if (handleAddToCart) handleAddToCart(event)
+          }}
           variant='default'
-          className='absolute bottom-[-20px] left-0 right-0 h-fit transform rounded-none py-1.5 opacity-0 transition-all duration-300 group-hover:bottom-0 group-hover:opacity-100'
+          className='absolute bottom-[-20px] left-0 right-0 z-20 h-fit transform rounded-none py-1.5 opacity-0 transition-all duration-300 group-hover:bottom-0 group-hover:opacity-100'
         >
           Add to Cart
         </Button>
